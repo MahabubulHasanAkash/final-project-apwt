@@ -1,0 +1,118 @@
+
+body { 
+  display: grid;
+  grid-template-areas: 
+    "header header header"
+    "nav article ads"
+    "footer footer footer";
+  grid-template-rows: 143px 1fr 70px;  
+  grid-template-columns: 10% 1fr 40%;
+
+  grid-column-gap: 2px;
+  height: 100vh;
+  margin: 0;
+  }  
+footer, nav, div {
+  padding: 1.2em;
+  background: #E3F6F8;
+  }
+article{
+    padding : 1em;
+    background:beige ;
+    line-height: 1.5;
+}
+.proof-detail{
+    font-family: 'Courier New', Courier, monospace;
+    background: aliceblue;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+    width: 100%;
+}
+header{
+    padding: 1.2em;
+    background: rgb(27, 16, 16);
+    }
+
+#pageHeader {
+  grid-area: header;
+  }
+#pageFooter {
+  grid-area: footer;
+  }
+#mainArticle { 
+  grid-area: article;      
+  }
+#mainNav { 
+  grid-area: nav; 
+  }
+#siteAds { 
+  grid-area: ads; 
+  } 
+/* Stack the layout on small devices/viewports. */
+@media all and (max-width: 575px) {
+  body { 
+    grid-template-areas: 
+      "header"
+      "article"
+      "ads"
+      "nav"
+      "footer";
+    grid-template-rows: 80px 1fr 70px 1fr 70px;  
+    grid-template-columns: 1fr;
+ }
+}
+
+/*Nav Bar css*/
+#logo{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    
+    text-align: center;
+  
+    font-size: 20px;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    color: aliceblue;
+  
+  }
+  #navbar {
+      list-style-type: none;
+      margin: 0;
+      padding: 20px;
+      overflow: hidden;
+      background-color: rgb(27, 16, 16);
+      position: -webkit-sticky; /* Safari */
+      position: sticky;
+      top: 0;
+      font-family:'Lucida Sans';
+      font-size: 18px;
+    }
+  
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333;
+      top: 0;
+      font-family: Amaranth;
+      font-size: 18px;
+    }
+  
+  li {
+    float: right;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  li a:hover, .dropdown:hover .dropbtn {
+    background-color: rgba(0, 0, 0, 0.815);
+  }
+
+  /*table css*/
+  
