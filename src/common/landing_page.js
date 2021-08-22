@@ -4,7 +4,7 @@ import { Box } from "@material-ui/core";
 import { Button, CssBaseline, AppBar, Toolbar } from "@material-ui/core";
 import StickyFooter from "./footer";
 import Nav from "./Nav";
-export default function landing_page() {
+export default function Landing_page() {
   useEffect(() => {
     document.title = "NftPlace | Digital Art Marketplace";
   }, []);

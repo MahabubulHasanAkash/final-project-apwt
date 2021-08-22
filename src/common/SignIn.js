@@ -69,13 +69,14 @@ export default function SignIn() {
         sessionStorage.setItem("userid", result["id"]);
         sessionStorage.setItem("useremail", result["email"]);
         sessionStorage.setItem("name", result["name"]);
+        sessionStorage.setItem("password", result["password"]);
         sessionStorage.setItem("usertype", result["usertype"]);
         sessionStorage.setItem("phone", result["phone"]);
         sessionStorage.setItem("profileImage", result["profileImage"]);
         console.log(sessionStorage.getItem("phone"));
         setAuth("");
-        if (result["usertype"] == "creator") {
-          history.push("/creator/home");
+        if (result["usertype"] == "collector") {
+          history.push("/admin/adminHome");
           swal({
             title: "Welcome " + result["name"],
             icon: "success",
@@ -83,7 +84,7 @@ export default function SignIn() {
         } else if (result["usertype"] == "collector") {
           history.push("collector/home");
         } else if (result["usertype"] == "admin") {
-          history.push("admin/home");
+          history.push("admin/adminHome");
         } else if (result["usertype"] == "dataAnalyst") {
           history.push("dataAnalyst/home");
         } else {
